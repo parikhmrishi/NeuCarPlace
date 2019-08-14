@@ -1,0 +1,11 @@
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\obj\Debug\netcoreapp2.1\NeuCarPlace.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\obj\Debug\netcoreapp2.1\NeuCarPlace.Domain.AssemblyInfoInputs.cache
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\obj\Debug\netcoreapp2.1\NeuCarPlace.Domain.AssemblyInfo.cs
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\bin\Debug\netcoreapp2.1\NeuCarPlace.Domain.deps.json
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\bin\Debug\netcoreapp2.1\NeuCarPlace.Domain.runtimeconfig.json
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\bin\Debug\netcoreapp2.1\NeuCarPlace.Domain.runtimeconfig.dev.json
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\bin\Debug\netcoreapp2.1\NeuCarPlace.Domain.dll
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\bin\Debug\netcoreapp2.1\NeuCarPlace.Domain.pdb
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\obj\Debug\netcoreapp2.1\NeuCarPlace.Domain.dll
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\obj\Debug\netcoreapp2.1\NeuCarPlace.Domain.pdb
+C:\Users\Rishi.Parikh\source\repos\NeuCarPlace\NeuCarPlace.Domain\obj\Debug\netcoreapp2.1\NeuCarPlace.Domain.csprojAssemblyReference.cache

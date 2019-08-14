@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container" *ngIf="show">
+  <div class="box mt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <img class="car-image" alt="car Image" src="{{ carDetail.image }}" />
+      </div>
+      <div class="col-md-9">
+        <div class="row mt-4">
+          <div class="col-md-8">
+            <h1 class="details-title">
+              {{ carDetail.modelName }}
+            </h1>
+            <h5>₹{{ carDetail.price }}</h5>
+          </div>
+          <div class="col-md-4 mt-4" *ngIf="carDetail.isAvailable && !checkBooking">
+            <button type="button" (click)="summary()" class="btn-properties">
+              Book
+            </button>
+          </div>
+          <div class="col-md-4 mt-4" *ngIf="carDetail.isAvailable && checkBooking">
+              <button type="button" (click)="cancelBooking()" class="btn-properties">
+                Delete Booking
+              </button>
+            </div>
+          <div class="col-md-4 mt-4" *ngIf="!carDetail.isAvailable">
+            <h3>Out of stock!</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            {{ carDetail.launchDate | date }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pl-5 pr-5 mt-3 text-justify">
+      <p>{{ carDetail.description }}</p>
+    </div>
+  </div>
+</div>

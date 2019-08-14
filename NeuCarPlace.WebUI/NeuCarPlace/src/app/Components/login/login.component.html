@@ -1,0 +1,66 @@
+<div class="box">
+  <div *ngIf="login">
+    <div class="align-center mt-7">
+      <form [formGroup]="loginForm" class="login-form">
+        <input
+          type="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          placeholder="Enter email id"
+          formControlName="email"
+        />
+        <input
+          type="password"
+          placeholder="Enter password"
+          formControlName="password"
+        />
+        <button
+          type="submit"
+          name="login"
+          (click)="submit(this.loginForm.get('password').value)"
+          [disabled]="!loginForm.valid"
+          id=""
+          class="mt-4 pl-3 pr-3"
+        >
+          Login
+        </button>
+        <br />
+        <span>Don't have an account?</span>&nbsp;
+        <a (click)="toggle()">Register here</a>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="!login">
+    <div class="align-center">
+      <form [formGroup]="registerForm" class="login-form">
+        <input
+          type="text"
+          pattern="[a-zA-Z][a-zA-Z ]+"
+          placeholder="Enter name"
+          formControlName="name"
+        />
+        <input
+          type="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+          placeholder="Enter email id"
+          formControlName="email"
+        />
+        <input
+          type="password"
+          placeholder="Enter password"
+          formControlName="password"
+        />
+        <button
+          type="submit"
+          (click)="register()"
+          [disabled]="!registerForm.valid"
+          value="Register"
+        >
+          Register
+        </button>
+        <br />
+        <span>Already have an account?</span>&nbsp;
+        <a (click)="toggle()">Login now</a>
+      </form>
+    </div>
+  </div>
+</div>
