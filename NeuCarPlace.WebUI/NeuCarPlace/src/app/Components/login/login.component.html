@@ -1,7 +1,8 @@
 <div class="box">
   <div *ngIf="login">
     <div class="align-center mt-7">
-      <form [formGroup]="loginForm" class="login-form">
+      <form [formGroup]="loginForm" class="login-form pt-3">
+        <h3 class="pb-2">NeuCarPlace</h3>
         <input
           type="email"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
@@ -15,23 +16,24 @@
         />
         <button
           type="submit"
+          class="btn-properties mt-4 pl-3 pr-3"
           name="login"
           (click)="submit(this.loginForm.get('password').value)"
           [disabled]="!loginForm.valid"
-          id=""
-          class="mt-4 pl-3 pr-3"
         >
           Login
         </button>
         <br />
-        <span>Don't have an account?</span>&nbsp;
-        <a (click)="toggle()">Register here</a>
+        <div class="mt-5">
+          <span>Don't have an account?</span>&nbsp;
+          <a (click)="toggle()">Register here</a>
+        </div>
       </form>
     </div>
   </div>
   <div *ngIf="!login">
-    <div class="align-center">
-      <form [formGroup]="registerForm" class="login-form">
+    <div class="align-center mt-7">
+      <form [formGroup]="registerForm" class="login-form pt-3">
         <input
           type="text"
           pattern="[a-zA-Z][a-zA-Z ]+"
@@ -51,6 +53,7 @@
         />
         <button
           type="submit"
+          class="btn-properties mt-4 pl-3 pr-3"
           (click)="register()"
           [disabled]="!registerForm.valid"
           value="Register"
@@ -58,8 +61,10 @@
           Register
         </button>
         <br />
-        <span>Already have an account?</span>&nbsp;
-        <a (click)="toggle()">Login now</a>
+        <div class="mt-5">
+            <span>Already have an account?</span>&nbsp;
+            <a (click)="toggle()">Login now</a>
+          </div>
       </form>
     </div>
   </div>

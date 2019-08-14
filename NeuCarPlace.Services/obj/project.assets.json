@@ -12563,11 +12563,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rishi.Parikh\\Documents\\NeuCarPlace\\NeuCarPlace\\NeuCarPlace.Services\\NeuCarPlace.Services.csproj",
+      "projectUniqueName": "C:\\Users\\Rishi.Parikh\\Documents\\Github\\NeuCarPlace\\NeuCarPlace.Services\\NeuCarPlace.Services.csproj",
       "projectName": "NeuCarPlace.Services",
-      "projectPath": "C:\\Users\\Rishi.Parikh\\Documents\\NeuCarPlace\\NeuCarPlace\\NeuCarPlace.Services\\NeuCarPlace.Services.csproj",
+      "projectPath": "C:\\Users\\Rishi.Parikh\\Documents\\Github\\NeuCarPlace\\NeuCarPlace.Services\\NeuCarPlace.Services.csproj",
       "packagesPath": "C:\\Users\\Rishi.Parikh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rishi.Parikh\\Documents\\NeuCarPlace\\NeuCarPlace\\NeuCarPlace.Services\\obj\\",
+      "outputPath": "C:\\Users\\Rishi.Parikh\\Documents\\Github\\NeuCarPlace\\NeuCarPlace.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12586,8 +12586,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Rishi.Parikh\\Documents\\NeuCarPlace\\NeuCarPlace\\NeuCarPlace.Domain\\NeuCarPlace.Domain.csproj": {
-              "projectPath": "C:\\Users\\Rishi.Parikh\\Documents\\NeuCarPlace\\NeuCarPlace\\NeuCarPlace.Domain\\NeuCarPlace.Domain.csproj"
+            "C:\\Users\\Rishi.Parikh\\Documents\\Github\\NeuCarPlace\\NeuCarPlace.Domain\\NeuCarPlace.Domain.csproj": {
+              "projectPath": "C:\\Users\\Rishi.Parikh\\Documents\\Github\\NeuCarPlace\\NeuCarPlace.Domain\\NeuCarPlace.Domain.csproj"
             }
           }
         }

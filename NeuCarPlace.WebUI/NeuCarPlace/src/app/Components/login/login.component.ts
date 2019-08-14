@@ -31,12 +31,11 @@ export class LoginComponent implements OnInit {
       email: ["", Validators.required],
       password: ["", Validators.required]
     });
-   
   }
 
   submit() {
     this.password = this.loginForm.get("password").value;
-debugger;
+    debugger;
     this.user.getUserById(this.loginForm.get("email").value).subscribe(
       password => {
         this.checkPassword(password);
@@ -50,15 +49,15 @@ debugger;
   }
 
   register() {
-    this.userData={
-      name: this.registerForm.get('name').value,
-      email: this.registerForm.get('email').value,
-      password: this.registerForm.get('password').value
-    }
+    this.userData = {
+      name: this.registerForm.get("name").value,
+      email: this.registerForm.get("email").value,
+      password: this.registerForm.get("password").value
+    };
     console.log(this.userData);
     this.user
       .postDetail(JSON.stringify(this.userData))
-      .subscribe(response => this.router.navigate(['login']));
+      .subscribe(response => this.router.navigate(["login"]));
   }
 
   toggle() {
@@ -67,7 +66,7 @@ debugger;
 
   checkPassword(password) {
     if (password == this.password) {
-      localStorage.setItem("email", this.loginForm.get('email').value)
+      localStorage.setItem("email", this.loginForm.get("email").value);
       this.navigateHome();
     } else {
       alert("Incorrect Password");

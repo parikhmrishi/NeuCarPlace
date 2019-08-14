@@ -11805,11 +11805,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rishi.Parikh\\Documents\\NeuCarPlace\\NeuCarPlace\\NeuCarPlace.Domain\\NeuCarPlace.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Rishi.Parikh\\Documents\\Github\\NeuCarPlace\\NeuCarPlace.Domain\\NeuCarPlace.Domain.csproj",
       "projectName": "NeuCarPlace.Domain",
-      "projectPath": "C:\\Users\\Rishi.Parikh\\Documents\\NeuCarPlace\\NeuCarPlace\\NeuCarPlace.Domain\\NeuCarPlace.Domain.csproj",
+      "projectPath": "C:\\Users\\Rishi.Parikh\\Documents\\Github\\NeuCarPlace\\NeuCarPlace.Domain\\NeuCarPlace.Domain.csproj",
       "packagesPath": "C:\\Users\\Rishi.Parikh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rishi.Parikh\\Documents\\NeuCarPlace\\NeuCarPlace\\NeuCarPlace.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Rishi.Parikh\\Documents\\Github\\NeuCarPlace\\NeuCarPlace.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
