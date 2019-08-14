@@ -21,13 +21,6 @@ namespace NeuCarPlace.Services.Controllers
             _context = context;
         }
 
-        // GET: api/Users
-        [HttpGet]
-        public IEnumerable<User> GetUsers()
-        {
-            return _context.Users;
-        }
-
         // GET: api/Users/5
         [HttpGet("{email}")]
         public async Task<IActionResult> GetUser([FromRoute] string email)

@@ -22,13 +22,6 @@ namespace NeuCarPlace.Services.Controllers
             _context = context;
         }
 
-        // GET: api/Purchases
-        [HttpGet]
-        public IEnumerable<Purchase> getPurchases()
-        {
-            return _context.Purchases;
-        }
-
         // GET: api/Purchases/something@gmail.com
         [HttpGet("{email}")]
         public async Task<IActionResult> getMyPurchase([FromRoute] string email)
@@ -69,42 +62,6 @@ namespace NeuCarPlace.Services.Controllers
         {
             return _context.Purchases.Any(e => e.CarId == carId && e.UserId == email);
 
-        }
-
-
-        // PUT: api/Purchases/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> putPurchase([FromRoute] int id, [FromBody] Purchase purchase)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != purchase.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(purchase).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PurchaseExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
         }
 
         // POST: api/Purchases
