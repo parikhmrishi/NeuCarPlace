@@ -1,10 +1,10 @@
 <app-header></app-header>
 <div class="container">
-  <div *ngFor="let car of cars" class="car-card-size">
+  <div *ngFor="let car of cars" class="car-card-size" (click)="carDetails(car)">
     <div class="car-image-size">
-      <img src="{{car.image}}" alt="Baleno" class ="img-properties" >
+      <img src="{{ car.image }}" alt="Baleno" class="img-properties" />
     </div>
-    <div class="car-details-style" (click) = "carDetails(car)">
+    <div class="car-details-style">
       <div>Car Name : {{ car.modelName }}</div>
       <div>Made By : {{ car.make }}</div>
       <div>Launch Date : {{ car.launchDate | date }}</div>
