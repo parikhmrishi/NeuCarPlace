@@ -1,8 +1,8 @@
 <ul class="nav bg-light pl-5 pb-2 pt-2">
   <li class="nav-item">
-    <a class="nav-link active" href="home">Home</a>
+    <a class="nav-link" href="home">Home</a>
   </li>
-  <li class="nav-item">
+  <li class="nav-item" *ngIf="isLoggedIn">
     <a class="nav-link" href="myorders">My Orders</a>
   </li>
 </ul>
