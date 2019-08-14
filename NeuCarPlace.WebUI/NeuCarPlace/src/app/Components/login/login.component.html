@@ -4,13 +4,15 @@
       <form [formGroup]="loginForm" class="login-form pt-3">
         <h3 class="pb-2">NeuCarPlace</h3>
         <input
-          type="email"
+          type="text"
+          class="form-input"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
           placeholder="Enter email id"
           formControlName="email"
         />
         <input
           type="password"
+          class="form-input"
           placeholder="Enter password"
           formControlName="password"
         />
@@ -36,18 +38,21 @@
       <form [formGroup]="registerForm" class="login-form pt-3">
         <input
           type="text"
+          class="form-input"
           pattern="[a-zA-Z][a-zA-Z ]+"
           placeholder="Enter name"
           formControlName="name"
         />
         <input
           type="email"
+          class="form-input"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
           placeholder="Enter email id"
           formControlName="email"
         />
         <input
           type="password"
+          class="form-input"
           placeholder="Enter password"
           formControlName="password"
         />

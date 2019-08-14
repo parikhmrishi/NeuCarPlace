@@ -1,6 +1,6 @@
-$primaryColor: #FFF;
-$accentColor: #FFF;
-$shadow : #AFAFAF;
+$primaryColor: #fff;
+$accentColor: #fff;
+$shadow: #afafaf;
 .box {
   background-color: $primaryColor;
   width: 100vw;
@@ -20,21 +20,25 @@ $shadow : #AFAFAF;
   padding: auto 0;
 }
 
-input {
-  border-radius: 10px;
-  background-color: rgb(248, 248, 248);
-  color: #000;
+.form-input {
+  border: 1px solid #000;
+  border-radius: 5px;
   display: block;
   margin: 0 auto;
-  margin-top:1rem;
-  padding: 5px 0;
-  outline: none
+  margin-top: 1rem;
+  outline: none;
+  padding: 5px 10px;
+  width: 80%;
+}
+
+input:focus {
+  border: 2px solid rgb(255, 123, 0);
 }
 
 a {
   font-style: italic;
   cursor: pointer;
-  
+
   color: rgb(65, 40, 207) !important;
 }
 
@@ -49,5 +53,5 @@ a {
   background-color: rgb(255, 123, 0);
   color: #000;
   border: none;
-  box-shadow: 2px 2px 5px 0px rgb(153, 74, 0)
+  box-shadow: 2px 2px 5px 0px rgb(153, 74, 0);
 }
