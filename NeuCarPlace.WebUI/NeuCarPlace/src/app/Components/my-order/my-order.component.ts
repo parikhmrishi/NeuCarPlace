@@ -18,7 +18,10 @@ export class MyOrderComponent implements OnInit {
       .getOrders(localStorage.getItem("email"))
       .subscribe(cars => {
         this.cars = cars;
+        if(this.cars.length !== 0)
         this.show = true;
+        console.log(this.cars);
+        
       },
       error => {
         this.show = false;
