@@ -15,9 +15,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     if (localStorage.getItem("email") != null) {
       this.isLoggedIn = true;
+    } else {
+      this.isLoggedIn = false;
+    }
+
+    if(this.router.url === "/home") {
+      this.isHome = true;
     }
     else {
-      this.isLoggedIn = false;
+      this.isHome = false;
     }
   }
 
