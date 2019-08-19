@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NeuCarPlace.Domain.Contexts;
 
 namespace NeuCarPlace.Domain.Migrations
 {
     [DbContext(typeof(NeuCarPlaceDbContext))]
-    partial class NeuCarPlaceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190819132842_v7")]
+    partial class v7
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

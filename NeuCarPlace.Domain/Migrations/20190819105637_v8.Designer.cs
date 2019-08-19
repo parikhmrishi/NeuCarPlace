@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NeuCarPlace.Domain.Contexts;
 
 namespace NeuCarPlace.Domain.Migrations
 {
     [DbContext(typeof(NeuCarPlaceDbContext))]
-    partial class NeuCarPlaceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190819105637_v8")]
+    partial class v8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,8 +62,7 @@ namespace NeuCarPlace.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CarId")
-                        .IsUnique();
+                    b.HasIndex("CarId");
 
                     b.ToTable("CarSpecs");
                 });
@@ -124,19 +125,19 @@ namespace NeuCarPlace.Domain.Migrations
             modelBuilder.Entity("NeuCarPlace.Domain.Entities.CarSpec", b =>
                 {
                     b.HasOne("NeuCarPlace.Domain.Entities.Car", "Car")
-                        .WithOne("CarSpec")
-                        .HasForeignKey("NeuCarPlace.Domain.Entities.CarSpec", "CarId")
+                        .WithMany()
+                        .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("NeuCarPlace.Domain.Entities.Purchase", b =>
                 {
                     b.HasOne("NeuCarPlace.Domain.Entities.Car", "Car")
-                        .WithMany("Purchases")
+                        .WithMany()
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("NeuCarPlace.Domain.Entities.User", "User")
+                    b.HasOne("NeuCarPlace.Domain.Entities.User")
                         .WithMany("Purchases")
                         .HasForeignKey("UserId");
                 });

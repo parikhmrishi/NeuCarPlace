@@ -12,6 +12,7 @@ namespace NeuCarPlace.Domain.Entities
         public int Id { get; set; }
         [ForeignKey("User")]
         public string UserId { get; set; }
+        public User User { get; set; }
         [ForeignKey("Car")]
         public int CarId { get; set; }
         public Car Car { get; set; }

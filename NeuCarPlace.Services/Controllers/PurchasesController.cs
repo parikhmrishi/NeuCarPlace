@@ -31,14 +31,14 @@ namespace NeuCarPlace.Services.Controllers
                 return BadRequest(ModelState);
             }
 
-            var carIdList = _context.Purchases.Where(u => u.UserId == email).Select(e => e.CarId).ToList();
+            var carDetail = _context.Purchases.Where(u => u.UserId == email).Select(e => e.Car);
 
-            if (carIdList == null)
+            if (carDetail == null)
             {
                 return NotFound();
             }
             List<PurchasesDTO> carDetails = new List<PurchasesDTO>();
-            var carDetail = _context.Cars.Where(e => carIdList.Contains(e.Id)).ToList();
+            
 
             foreach (var thisCar in carDetail)
             {

@@ -21,6 +21,27 @@ namespace NeuCarPlace.Domain.Contexts
             optionsBuilder.UseSqlServer("Server =.; Database = NeuCarPlace; Trusted_Connection = true");
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // configures one-to-many relationship
+            modelBuilder.Entity<Car>()
+             .HasOne<CarType>(ct => ct.CarType)
+             .WithMany(ct => ct.Cars)
+             .HasForeignKey(c => c.CarTypeId);
+
+            modelBuilder.Entity<Purchase>()
+            .HasOne<Car>(c => c.Car)
+            .WithMany(c => c.Purchases)
+            .HasForeignKey(c => c.CarId);
+
+            modelBuilder.Entity<Purchase>()
+            .HasOne<User>(u => u.User)
+            .WithMany(u => u.Purchases)
+            .HasForeignKey(u => u.UserId);
+
+        }
     }
+
 }
+
 

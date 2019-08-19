@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace NeuCarPlace.Domain.Entities
@@ -19,6 +20,9 @@ namespace NeuCarPlace.Domain.Entities
         public bool IsAvailable { get; set; }
         public long Price { get; set; }
         public string Image { get; set; }
+
+        public ICollection<Purchase> Purchases { get; set; }
+        public CarSpec CarSpec { get; set; }
 
     }
 }
