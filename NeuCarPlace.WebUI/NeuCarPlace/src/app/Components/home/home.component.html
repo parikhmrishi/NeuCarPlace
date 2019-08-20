@@ -1,14 +1,23 @@
 <app-header></app-header>
 <div class="container">
-  <div *ngFor="let car of cars" class="car-card-size" (click)="carDetails(car)">
-    <div class="car-image-size">
-      <img src="{{ car.image }}" alt="Baleno" class="img-properties" />
-    </div>
-    <div class="car-details-style">
-      <div>Car Name : {{ car.modelName }}</div>
-      <div>Made By : {{ car.make }}</div>
-      <div>Launch Date : {{ car.launchDate | date }}</div>
-      <div>Price : {{ car.price }}</div>
+  <div *ngIf="!show">
+    <h2 class="text-properties mt-5">No orders to show</h2>
+  </div>
+  <div class="car-details-style" *ngIf="show">
+    <div
+      *ngFor="let car of cars"
+      class="car-card-size"
+      (click)="carDetails(car)"
+    >
+      <div class="car-image-size">
+        <img src="{{ car.image }}" alt="Baleno" class="img-properties" />
+      </div>
+      <div class="">
+        <div>Car Name : {{ car.modelName }}</div>
+        <div>Made By : {{ car.make }}</div>
+        <div>Launch Date : {{ car.launchDate | date }}</div>
+        <div>Price : {{ car.price }}</div>
+      </div>
     </div>
   </div>
 </div>

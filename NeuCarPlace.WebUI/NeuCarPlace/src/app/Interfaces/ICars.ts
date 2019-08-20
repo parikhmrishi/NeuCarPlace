@@ -1,6 +1,7 @@
 export interface ICars {
-  model: string;
-  make: string;
-  launchDate: Date;
-  price: number;
+  CarId: number;
+  ModelName:string;
+  Price:number;
+  Image: string;
+  LaunchDate: Date;
 }

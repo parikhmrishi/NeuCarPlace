@@ -1,6 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment";
+import { ICars } from '../Interfaces/ICars';
+import { Observable } from 'rxjs';
 
 const URL = environment.apiUrl;
 @Injectable({
@@ -9,8 +11,8 @@ const URL = environment.apiUrl;
 export class OrderService {
   constructor(private http: HttpClient) {}
 
-  getOrders(email: string) {
-    return this.http.get(URL + "purchases/" + email);
+  getOrders(email: string): Observable<ICars> {
+    return this.http.get<ICars>(URL + "purchases/" + email);
   }
 
   checkBooking(email: string, carId: number) {
